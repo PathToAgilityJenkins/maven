@@ -3,8 +3,11 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        withMaven(maven: 'Maven 3.5.0') {
-          sh 'mvn package'
+        dir(path: 'maven') {
+          withMaven(maven: 'Maven 3.5.0') {
+            sh 'mvn package'
+          }
+          
         }
         
       }
