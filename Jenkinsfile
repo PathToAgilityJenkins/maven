@@ -23,5 +23,20 @@ pipeline {
         
       }
     }
+    stage('Analyze') {
+      steps {
+        echo 'Perform code analysis here.'
+      }
+    }
+    stage('Deploy') {
+      steps {
+        echo 'Perform automated deployment here.'
+      }
+    }
+    stage('Test') {
+      steps {
+        echo 'Perform automated functional tests here.'
+      }
+    }
   }
 }
