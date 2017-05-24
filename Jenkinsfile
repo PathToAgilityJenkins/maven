@@ -34,6 +34,10 @@ pipeline
     
     stage('Analyze') 
     {
+      when
+      {
+      	expression {return CurrentBuild.result == 'UNSTABLE'}
+      }
       steps 
       {
         echo 'Perform code analysis here.'
