@@ -12,7 +12,7 @@ pipeline
         {
           withMaven(maven: 'Maven 3.5.0') 
           {
-            sh 'mvn package' -Dmaven.test.failure.ignore
+            sh 'mvn package -Dmaven.test.failure.ignore'
           }
         }
       }
